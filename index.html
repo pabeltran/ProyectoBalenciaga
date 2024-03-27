@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Administraciones Balenciaga</title>
+    <script>
+        // Verificar si la página se cargó con un anclaje y redirigir al inicio si es así
+        window.addEventListener("load", function() {
+            if (window.location.hash) {
+                window.location.href = window.location.pathname;
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+    <link rel="stylesheet"href="estilos.css">
+    <!--DATA-AOS(Link de css cuando se hace scroll y aparecen las imagenes)-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--ANIMATE CSS-->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--SWIFFY SLIDER(Links del Carrusel)-->
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!--SLIDER for Safari (iPhone)-->
+    <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js" crossorigin="anonymous" defer></script>
+    <!--FONT AWESOME (Link de íconos para footer)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a class="logo" href="index.html">
+                <img src="images/adminbalen.png" alt="Logo de Mi Página Web">
+            </a>
+            <nav data-aos="fade-left">
+                <a href="#somosbalen">QUIÉNES SOMOS</a>
+                <a href="#nuestroserv">NUESTRO SERVICIO</a>
+                <a href="#contact">CONTACTO</a>
+                <button onclick="window.location.href='login.html'">INICIA SESIÓN</button>
+            </nav>
+        </div>    
+    </header>
+
+    <section id="hero" class="parallax">
+        <div class="parallax-content">
+            <h1 class="animate__animated animate__backInDown">BIENVENIDO A TU ADMINISTRADOR DE CONFIANZA</h1>
+        </div>
+    </section>
+
+    <section id="somosbalen">
+        <div class="textnosotros" data-aos="fade-right" data-aos-duration="800">
+            <h2>NOSOTROS</h2>
+            <p>En <strong>ADMINISTRACIONES BALENCIAGA</strong> estamos comprometidos a servir y satisfacer sus necesidades de manera óptima</p>
+            <p><strong>Nuestra misión</strong> es brindar claridad, transparencia y ofrecer a los administradores un manejo práctico, dinámico e intutitivo de la información, respaldado por la mejor tecnología disponible. Los administradores podrán acceder al sistema en línea, lo que les permite gestionar el consorcio y realizar consultas de manera eficiente. Desde la elaboración de planillas de expensas, pagos, registro de novedades, carga de facturas, estados de cuenta hasta la revisión de balances y mucho más. Nuestro sistemas está diseñado para ahorrar tiempo y minimizar la necesidad de llamadas y consultas administrativas rutinarias.</p>
+            <p>En <strong>ADMINISTRACIONES BALENCIAGA</strong> nos enorgullece ser su aliado en la gestión de consorcios, brindándole soluciones tecnológicas de vanguardia y un servicio excepcional para optimizar su experiencia como administrador.</p>
+        </div>
+        <div class="imgnosotros" data-aos="fade-up" data-aos-duration="800">
+            <img src="images/edif-nosotros.jpg" alt="Edificio Nosotros">
+        </div>
+    </section>
+
+    <section id="nuestroserv" >
+            <h2>NUESTRO SERVICIO</h2>
+            <div class="container">
+                <div class="carta" data-aos="fade-left" data-aos-duration="800">
+                    <div class="imagen">
+                        <img src="images/reporte-gastos.png" alt="Imagen frontal">
+                    </div>
+                    <div class="texto">
+                        <h5>Reportes Financieros</h5>
+                        <p>Es una herramienta esencial para mantener un control sólido y transparente de las finanzas de tu consorcio.<br>
+                        Con acceso a una variedad de informes detallados, como estados de cuenta, resúmenes de gastos, balances y más, te ofrecemos una visión precisa y actualizada de la salud financiera de tu consorcio.</p>
+                    </div>
+                </div>
+                <div class="carta" data-aos="fade-left" data-aos-duration="800">
+                    <div class="imagen">
+                        <img src="images/Metod-pago.png" alt="Imagen frontal">
+                    </div>
+                    <div class="texto">
+                        <h5>Medios de Pago</h5>
+                        <p>Nuestra plataforma simplifica y agiliza la gestión de las transacciones financieras. Con una variedad de opciones de pago seguras y convenientes, te ofrecemos la flexibilidad necesaria para cumplir con tus obligaciones financieras de manera eficiente.</p>
+                    </div>
+                </div>
+                <div class="carta" data-aos="fade-left" data-aos-duration="800">
+                    <div class="imagen">
+                        <img src="images/Sistema-Comu.png" alt="Imagen frontal">
+                    </div>
+                    <div class="texto">
+                        <h5>Sistema de Comunicación</h5>
+                        <p>Con nuestro sistema, vas a poder enviar y recibir mensajes de forma rápida y segura, ya sea para compartir anuncios, programar reuniones, o coordinar tareas. Te ofrecemos la posibilidad de almacenar y acceder a documentos relevantes en un espacio centralizado.</p>
+                    </div>
+            </div>
+    </section>
+
+    <section id="contact">
+            <h4>CONTÁCTANOS</h4>
+            <form action="procesar_formulario.php" method="POST">
+                <label for="nombre-completo">Nombre completo:</label>
+                <input type="text" id="nombre-completo" name="nombre-completo" required>
+        
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+        
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        
+                <button type="submit">Enviar</button>
+            </form>
+        </div>      
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-links">
+                   <h6>COMPAÑÍA</h6>
+                   <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">¿Quiénes Somos?</a></li>
+                        <li><a href="#servicios">Nuestro Servicio</a></li>
+                        <li><a href="#contact">Contáctanos</a></li>
+                   </ul>
+                </div>
+                <div class="footer-links">
+                    <h6>AYUDA</h6>
+                    <ul>
+                         <li><a href="#preguntas">Preguntas Frecuentes</a></li>
+                         <li><a href="#soporte">Centro de Soporte</a></li>
+                         <li><a href="#politicapriv">Política de Privacidad</a></li>
+                         <li><a href="#terminos">Términos y Condiciones</a></li>
+                    </ul>
+                 </div>
+                <div class="footer-links">
+                    <h6>¡SEGUINOS!</h6>
+                    <div class="social-link">
+                         <a href="#"><i class="fab fa-google"></i></a>
+                         <a href="#"><i class="fab fa-instagram"></i></a>
+                         <a href="#"><i class="fab fa-twitter"></i></a>
+                         <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copy">
+            <p>&copy; AdministracionesBalenciaga2023 | Todos los derechos reservados | Desarrollado por <span style
+                ="color:#00c3ff;"> BI-Clouds</span></p>
+            </div>    
+        </div>
+        
+    </footer>
+
+    <!--DATA-AOS(Link de JS cuando se hace scroll y aparecen las imagenes)-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+<html>

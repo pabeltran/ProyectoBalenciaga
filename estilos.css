@@ -1,0 +1,482 @@
+@import url('https://fonts.cdnfonts.com/css/glacial-indifference-2');
+
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Glacial Indifference', sans-serif;
+    margin: 0%;
+    overflow-x: hidden !important;
+    height: 100%;
+}
+
+h1{font-size: 55px;}
+h2{font-size: 35px;}
+h3{font-size: 15px;}
+h4{font-size: 35px;}
+p{font-size: 13px}
+
+
+
+button{
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+   /* padding: 10px 10px;*/
+    border-radius: 10px;
+    border-color: #000000;
+    color: #fff;
+    background-color: #004473;
+}
+
+button:hover{
+    background-color: #2d69ad;
+}
+
+header{
+    background-color:#ffffff;
+}
+
+header img{
+    max-height:100px;
+    display: block;
+}
+
+/* Estilos para el logo */
+.logo {
+    display: inline-block;
+    transition: all .1s ease;
+}
+
+.logo img {
+   max-height: 100px;
+   display: block;
+}
+
+/* Estilos de hover para el logo */
+.logo:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del logo al pasar el mouse sobre él */
+}
+
+
+header .container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding: 0px 0px;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px 100px;
+}
+
+header a{
+    padding: 10px 15px; 
+    text-decoration:none;
+    color: #000000;
+    transition: all .1s ease;
+}
+
+header a:hover{
+    color: #2d69ad;
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 768px) {
+    header nav{
+        padding: 0px 10px;
+    }
+    
+    header a{
+        font-size: 14px;
+    }
+
+}
+
+
+/* Estilos generales para las secciones con parallax */
+.parallax {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content:baseline;
+    text-align:center;
+    flex-direction: column;
+    height: 650px;
+    color: rgb(0, 0, 0);
+    background-image: url("images/ilustración-edif.1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: #000000;
+    padding: 170px 12px;
+}
+
+/* Estilos para pantallas más pequeñas (por ejemplo, teléfonos) */
+@media only screen and (max-width: 768px) {
+    #hero {
+        height: 450px; /* Ajusta la altura automáticamente */
+        padding: 50px 12px; /* Ajusta el relleno */
+    }
+
+    #hero h1 {
+        padding: 50px 12px; /* Ajusta el relleno del h1 */
+        font-size: 40px;
+    }
+}
+
+
+#somosbalen{
+    display: flex;
+    padding: 20px 20px;
+}
+
+#somosbalen .textnosotros {
+    flex: 1; /* Las columnas ocupan un espacio igual */
+    padding: 10px; /* Espacio de relleno para separar las columnas */
+}
+
+#somosbalen p{
+    font-size: 25px;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 768px) {
+    #somosbalen p{
+        font-size: 15px;
+    }
+}
+
+
+/* Estilos para pantallas medianas y grandes */
+@media only screen and (min-width: 769px) {
+    #somosbalen p{
+        font-size: 18px;
+    }
+}
+
+#somosbalen .imgnosotros {
+    flex: 1; /* Las columnas ocupan un espacio igual */
+    padding: 10px; /* Espacio de relleno para separar las columnas */
+    border: 3px solid #ccc;
+}
+
+.imgnosotros img{
+    text-align: right;
+    width: 800px;
+    height: 680px;
+}
+
+
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    #somosbalen {
+        flex-direction: column-reverse; /* Invierte el orden de los elementos en pantallas pequeñas */
+    }
+
+    .textnosotros,
+    .imgnosotros {
+        width: 100%; /* Asegura que los elementos ocupen el 100% del ancho en pantallas pequeñas */
+    }
+
+    .imgnosotros img{
+        max-width: 100%; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
+        height: auto; /* Permite que la altura de la imagen se ajuste proporcionalmente al ancho */
+    }
+}
+
+/* Estilos para pantallas medianas y grandes */
+@media only screen and (min-width: 769px) {
+    #somosbalen {
+        flex-direction: row; /* Restablece la disposición de los elementos para pantallas medianas y grandes */
+    }
+
+    .textnosotros,
+    .imgnosotros {
+        width: 50%; /* Ajusta el ancho de los elementos en pantallas medianas y grandes */
+    }
+
+    .imgnosotros img {
+        max-width: 100%; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
+        height: auto; /* Permite que la altura de la imagen se ajuste proporcionalmente al ancho */
+    }
+}
+
+#nuestroserv{
+    background-color: #2d69ad;
+    color: #000000;
+}
+
+#nuestroserv h2{
+    text-align: left;
+    padding: 20px 20px;
+    color: white;
+}
+
+
+#nuestroserv .container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 50px 50px;
+}
+
+
+.container .carta{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background: ghostwhite;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+
+
+.container .carta:hover
+{
+    height: 400px;
+}
+
+
+.container .carta .imagen{
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+
+.container .carta:hover .imagen{ 
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.2);
+}
+
+.container .carta .imagen img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .carta .texto{
+   position: absolute;
+   top: 252px;
+   width: 100%;
+   padding: 0 30px;
+   height: 35px;
+   overflow: hidden;
+   text-align: center;
+   transition: 0.5s;
+}
+
+.container .carta:hover .texto{
+    top: 130px;
+    height: 250px;
+}
+
+.container .carta .texto h5{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #000000;
+}
+
+
+.container .carta .texto p{
+    color: #000000;
+    text-align: center;
+}
+
+@media(min-width: 769px){
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0%;
+        padding-right: 20px;
+    }
+}
+
+/*CONTACTO*/
+#contact{
+    padding: 20px 20px;
+}
+
+/* Aplicar un fondo y márgenes al formulario */
+form {
+    background-color: #2d69ad;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 20px;
+    color: white;
+    border-radius: 12px;
+}
+
+/* Cambiar el color del botón de envío */
+form button[type="submit"] {
+    background-color: #004473;
+    color: #fff;
+    padding: 5px 10px;
+    border:2px solid #000000;
+    cursor: pointer;
+}
+
+/* Estilo de las etiquetas */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+/* Estilo de los campos de entrada */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Cambiar el color del borde cuando se enfoca en un campo */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form textarea:focus {
+    border-color: #0084ff;
+}
+/* Estilo de los mensajes de error */
+form .error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+
+footer .container{
+    max-width: 1200px;
+    margin: 0% auto;
+}
+
+footer{
+    background-color:#2d69ad;
+    padding: 50px 0px;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-links h6{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #00c3ff;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-links ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+    color: #ffffff;
+    transition: all .1s ease;
+}
+
+.footer-links ul li a:hover{
+    color: #ffffff;
+    transform: scale(1.1) ;
+}
+
+
+.social-link a{
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: gray;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all .1s ease;
+}
+
+.social-link a:hover{
+    background-color: #00c3ff;
+    transform: scale(1.1);
+}
+
+@media(max-width:768px){
+    .footer-row{
+        text-align: center;
+    }
+
+    .footer-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+.footer-copy p{
+    position: relative;
+    text-align: right;
+    justify-content: right;
+    font-size: 90%;
+    font-family: 'Glacial Indifference', sans-serif;
+    color: #ffffff;
+
+}
